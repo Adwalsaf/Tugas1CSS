@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+        }
+
+        button {
+            background: #ffcc00;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+            width: 100%;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form class="form-group" onsubmit="validateRegister(event)">
+            <input type="text" id="username" name="username" placeholder="Username" required minlength="3">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="password" id="password" name="password" placeholder="Password" required minlength="6">
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Sudah punya akun? <a href="login1.html" class="link">Login</a></p>
+    </div>
+
+    <script>
+        function validateRegister(event) {
+            event.preventDefault();
+            window.location.href = "cv1.html";
+        }
+    </script>
+</body>
+</html>
